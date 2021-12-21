@@ -90,6 +90,13 @@ My providor that i wrap with is linked to a particular store.
 
 ```
 
+**How do we access the Data in the Store**
+
+```
+We usr the UseSelector Hook from React redux
+
+```
+
 **Notes By**
 
 ```
