@@ -1,6 +1,7 @@
-import logo from './logo.svg'
 import './App.css'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { actionCreators } from './state/index'
 
 function App() {
   //How i call my Store inside my Component
@@ -9,9 +10,23 @@ function App() {
   //to acess the State that we want
   const account = useSelector((state) => state.account)
 
-  console.log(account)
+  //I have to use actionCreators with a hook called useDispatch
+  const dispatch = useDispatch()
 
-  return <div className='App'></div>
+  //Very Important Steps
+  const { depositMoney, withdrawMoney } = bindActionCreators(
+    actionCreators,
+    dispatch
+  )
+
+  //Once i dispatch an action, our reducer sees that and updates our State
+  return (
+    <div className='App'>
+      <h1>{account}</h1>
+      <button onClick={() => depositMoney(1000)}>Deposit</button>
+      <button onClick={() => withdrawMoney(1000)}>Withdraw</button>
+    </div>
+  )
 }
 
 export default App
