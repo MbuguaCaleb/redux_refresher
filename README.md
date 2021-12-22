@@ -103,7 +103,14 @@ The help redux deal with asynchronous actions i use what we call redux thunk.
 It is very important to apply thunk middleware so that you are able to handle asyncronous tasks.
 
 This handles my dispatch function treating it as if it is asynchronous yet it is  synchronous.
+
+N/B
+
+I can create an app where my redux is already templated using the followinf command,
+
+npx create-react-app myapp --template redux
 ```
+
 
 **Notes By**
 
