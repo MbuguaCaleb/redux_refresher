@@ -93,8 +93,16 @@ My providor that i wrap with is linked to a particular store.
 **How do we access the Data in the Store**
 
 ```
-We usr the UseSelector Hook from React redux
+We use the UseSelector Hook from React redux
 
+Whenever i am dispatching my actions directly as they are like functions i must use
+the redux-thunk middleware.
+
+The help redux deal with asynchronous actions i use what we call redux thunk.
+
+It is very important to apply thunk middleware so that you are able to handle asyncronous tasks.
+
+This handles my dispatch function treating it as if it is asynchronous yet it is  synchronous.
 ```
 
 **Notes By**
